@@ -351,9 +351,9 @@ class operateShutters(MyLog):
 
         self.console = SetupLogger("shutters_console", log_file = "", stream = True)
 
-        if os.geteuid() != 0:
-            self.LogConsole("You need to have root privileges to run this script.\nPlease try again, this time using 'sudo'.")
-            sys.exit(1)
+        #if os.geteuid() != 0:
+        #    self.LogConsole("You need to have root privileges to run this script.\nPlease try again, this time using 'sudo'.")
+        #    sys.exit(1)
 
         if not os.path.isfile(self.ConfigFile):
             self.LogConsole("Creating new config file : " + self.ConfigFile)

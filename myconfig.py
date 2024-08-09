@@ -24,8 +24,8 @@ class MyConfig (MyLog):
         self.Longitude = 0
         self.SendRepeat = 1
         self.UseHttps = False
-        self.HTTPPort = 80
-        self.HTTPSPort = 443
+        self.HTTPPort = 8080
+        self.HTTPSPort = 8443
         self.RTS_Address = "0x279620"
         self.MQTT_ClientID = "somfy-mqtt-bridge"
         self.Shutters = {}
