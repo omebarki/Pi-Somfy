@@ -1,0 +1,15 @@
+
+[Unit]
+Description=Pi Somfy Shutter Service
+After=network-online.target
+
+[Service]
+User=omar
+ExecStart= bash /home/omar/code_workspace/Pi-Somfy/start_http.sh
+Environment=PYTHONUNBUFFERED=1
+Restart=on-failure
+Type=exec
+
+
+[Install]
+WantedBy=multi-user.target

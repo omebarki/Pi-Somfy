@@ -7,7 +7,6 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.end_headers()
-        print(self.path)
         if self.path == "/g":
             subprocess.run(
                 ['/usr/bin/python3',
