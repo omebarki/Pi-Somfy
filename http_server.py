@@ -7,7 +7,8 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.end_headers()
-        if self.path == "/g":
+        if self.path == "/g?password=password":
+            print(self.path)
             subprocess.run(
                 ['/usr/bin/python3',
                  '/home/omar/code_workspace/Pi-Somfy/operateShutters.py',
