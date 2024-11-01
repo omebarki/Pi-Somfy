@@ -7,7 +7,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.end_headers()
-        if self.path == "/g?password=password":
+        if self.path == "/g?password=password" :
             print(self.path)
             subprocess.run(
                 ['/usr/bin/python3',
@@ -18,6 +18,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
                  '-u'
                  ]
             )
+            self.wfile.write(b'OK!')
         self.wfile.write(b'OK!')
 
 
